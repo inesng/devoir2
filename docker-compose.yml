@@ -3,13 +3,13 @@ services:
   manager:
     build: .
     depends_on:
-      - database
+      - db
     environment:
       CSV_FILENAME: data.csv
       POSTGRES_USER: ines
       POSTGRES_PASSWORD: password
       POSTGRES_DB: POSTGRES_DB
-  database:
+  db:
     image: postgres
     environment:
       CSV_FILENAME: data.csv
